@@ -58,8 +58,10 @@ kotlin {
     sourceSets {
         commonMain {
             dependencies {
-                implementation(libs.kotlin.stdlib)
+                //implementation(libs.kotlin.stdlib)
                 // Add KMP dependencies here
+                implementation(libs.androidx.lifecycle.viewmodel)
+                implementation(libs.androidx.lifecycle.runtime.compose)
             }
         }
 
@@ -79,8 +81,8 @@ kotlin {
 
         getByName("androidDeviceTest") {
             dependencies {
-                implementation(libs.androidx.runner)
-                implementation(libs.androidx.core)
+                //implementation(libs.androidx.runner)
+                //implementation(libs.androidx.core)
                 implementation(libs.androidx.test.junit)
             }
         }
